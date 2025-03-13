@@ -366,120 +366,121 @@
             transform: translate(-70px ,10px);
             }
             button {
-            position: relative;
-            width: 130px;
-            height: 35px;
-            border-radius: 30px;
-            background-color: white;
-            border: 1px #FFB700 solid;
-            overflow: hidden;
-            }
+                position: relative;
+                width: 130px;
+                height: 35px;
+                border-radius: 30px;
+                background-color: white;
+                border: 1px #FFB700 solid;
+                overflow: hidden;
+                }
 
-            .text1 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-left: 22%;
-            }
+                .text1 {
+                font-size: 15px;
+                font-weight: 600;
+                margin-left: 22%;
+                }
 
-            .text2 {
-            position: absolute;
-            top: 25%;
-            left: -50px;
-            font-weight: 700;
-            font-size: 14px;
-            color: white;
-            }
+                .text2 {
+                position: absolute;
+                top: 25%;
+                left: -50px;
+                font-weight: 700;
+                font-size: 14px;
+                color: white;
+                }
 
-            .icon {
-            left: 0;
-            transition: transform 0.5s;
-            }
+                .icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: transform 0.5s;
+                }
 
-            .icon::before {
-            position: absolute;
-            left: -100px;
-            top: 0;
-            z-index: 1;
-            content: '';
-            width: 130px;
-            height: 33px;
-            border-radius: 30px;
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-            ;
-            }
+                .icon::before {
+                position: absolute;
+                left: -100px;
+                top: 0;
+                z-index: -1;
+                content: '';
+                width: 130px;
+                height: 33px;
+                border-radius: 30px;
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                ;
+                }
 
-            button:hover .icon {
-            transform: translateX(96px);
-            transition: transform 0.5s;
-            }
+                button:hover .icon {
+                transform: translateX(96px);
+                transition: transform 0.5s;
+                }
 
-            button:hover .text2 {
-            transform: translateX(100px);
-            transition: transform 0.6s;
-            }
+                button:hover .text2 {
+                transform: translateX(100px);
+                transition: transform 0.6s;
+                }
 
-            button:active {
-            transform: scale(1.03);
-            }
-            button {
-            position: relative;
-            width: 130px;
-            height: 35px;
-            border-radius: 30px;
-            background-color: white;
-            border: 1px #2867b2 solid;
-            overflow: hidden;
-            }
+                button:active {
+                transform: scale(1.03);
+                }
+                button {
+                position: relative;
+                width: 130px;
+                height: 35px;
+                border-radius: 30px;
+                background-color: white;
+                border: 1px #2867b2 solid;
+                overflow: hidden;
+                }
 
-            .text1 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-left: 22%;
-            }
+                .text1 {
+                font-size: 15px;
+                font-weight: 600;
+                margin-left: 22%;
+                }
 
-            .text2 {
-            position: absolute;
-            top: 25%;
-            left: -50px;
-            font-weight: 700;
-            font-size: 14px;
-            color: white;
-            }
+                .text2 {
+                position: absolute;
+                top: 25%;
+                left: -50px;
+                font-weight: 700;
+                font-size: 14px;
+                color: white;
+                }
 
-            .icon {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 130px;
-            height: 45px;
-            transition: transform 0.5s;
-            }
+                .icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: transform 0.5s;
+                }
 
-            .icon::before {
-            position: absolute;
-            left: -100px;
-            top: 0;
-            z-index: -1;
-            content: '';
-            width: 130px;
-            height: 33px;
-            border-radius: 30px;
-            background-color: #2867b2;
-            }
+                .icon::before {
+                position: absolute;
+                left: -100px;
+                top: 0;
+                z-index: -1;
+                content: '';
+                width: 130px;
+                height: 33px;
+                border-radius: 30px;
+                background-color: #2867b2;
+                }
 
-            button:hover .icon {
-            transform: translateX(96px);
-            transition: transform 0.5s;
-            }
+                button:hover .icon {
+                transform: translateX(96px);
+                transition: transform 0.5s;
+                }
 
-            button:hover .text2 {
-            transform: translateX(100px);
-            transition: transform 0.6s;
-            }
+                button:hover .text2 {
+                transform: translateX(100px);
+                transition: transform 0.6s;
+                }
 
-            button:active {
-            transform: scale(1.03);
-            }
+                button:active {
+                transform: scale(1.03);
+
+                }
             @media (max-width: 847px) {
             nav ul {
                 display: none;
