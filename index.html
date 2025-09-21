@@ -1022,10 +1022,7 @@
             >
               <i class="bx bxl-github socialsar"></i>
             </button>
-            <button
-              class="social-btn"
-              onclick="window.open('mailto:anshikarakheja1@gmail.com', '_blank')"
-            >
+            <button class="social-btn" onclick="openEmail()">
               <i class="bx bxl-gmail socialsar"></i>
             </button>
           </div>
@@ -1034,23 +1031,60 @@
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-      // Mobile menu toggle
       function sendEmail() {
         const from = document.getElementById("fromEmail").value;
         const body = document.getElementById("messageBody").value;
         const to = "anshikarakheja1@gmail.com";
         const subject = "Contacted via Portfolio";
 
-        // mailto link
         const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
           subject
         )}&body=${encodeURIComponent(body)}%0A%0AFrom:%20${encodeURIComponent(
           from
         )}`;
 
-        // open default mail client
-        window.location.href = mailtoLink;
+        try {
+          window.location.href = mailtoLink;
+        } catch (err) {
+          console.log("Default mail client not found, opening Gmail instead.");
+
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+            to
+          )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+            body + "\n\nFrom: " + from
+          )}`;
+          window.open(gmailUrl, "_blank");
+        }
       }
+      function openEmail() {
+        const to = "anshikarakheja1@gmail.com";
+        const subject = "Contact via Portfolio";
+        const body = "Hello, I wanted to reach out to you.";
+
+        const mailtoLink = `mailto:${to}?subject=${encodeURIComponent(
+          subject
+        )}&body=${encodeURIComponent(body)}`;
+        try {
+          window.location.href = mailtoLink;
+
+          setTimeout(() => {
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+              to
+            )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+              body
+            )}`;
+            window.open(gmailUrl, "_blank");
+          }, 1000);
+        } catch (err) {
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+            to
+          )}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+            body
+          )}`;
+          window.open(gmailUrl, "_blank");
+        }
+      }
+
       function toggleMenu() {
         const menu = document.getElementById("navMenu");
         const toggle = document.querySelector(".menu-toggle");
